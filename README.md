@@ -1,15 +1,16 @@
----
-title: CattleSense AI Research Dashboard
-emoji: 🐄
-colorFrom: green
-colorTo: blue
-sdk: gradio
-sdk_version: 6.0.0
-app_file: app.py
-pinned: false
----
+# LivestockSense EdgeAI — CattleSense Research Dashboard v2.0
 
-# CattleSense AI — Research Dashboard v2.0
+**Public deployment:** use `streamlit_app.py` with Streamlit Community Cloud. Insert your actual deployed URL here once the app is working.
+
+**Local Streamlit run:**
+```bash
+python -m pip install -r requirements.txt
+streamlit run streamlit_app.py
+```
+
+**Existing Gradio app:** `app.py` has been preserved; run it with `python app.py` if required.
+
+# LivestockSense EdgeAI — CattleSense Research Dashboard v2.0
 
 A Gradio 6 research portfolio dashboard for an exploratory six-cow accelerometer classification study.
 
