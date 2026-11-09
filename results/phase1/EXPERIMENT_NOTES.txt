@@ -1,0 +1,4 @@
+Single split by animal. Test cow 4 was not used for fitting or confidence threshold selection.
+Overlapping windows are correlated: do not interpret their count as independent animals.
+Four classes from beef cow accelerometer data. No dairy-cow field validation.
+Dataset license: CC BY-NC-ND 4.0; see original Zenodo record.

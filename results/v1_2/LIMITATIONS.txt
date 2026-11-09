@@ -1,0 +1,6 @@
+Small sample of six beef cattle, not dairy field deployment.
+Animal-held-out testing prevents same-cow train/test overlap but not farm or sensor transfer effects.
+Some cows have no RUS examples. Missing recall is not zero.
+Class selection based on validation can be unstable on a single cow.
+Window-level metrics are correlated because windows overlap.
+No hardware, power or energy evaluations. No model deployed in this stage.

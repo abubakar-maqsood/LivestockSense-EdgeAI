@@ -1,0 +1,6 @@
+Only six beef cattle; not validated on dairy cows
+Overlapping windows reduce effective independence
+Cross-animal results are exploratory; no separate external validation set
+Selectivity on individual cows may be poorly calibrated
+Test folds already used in earlier exploration; do not claim pristine independent test set
+No on-device memory, latency or power measurements

@@ -1,0 +1,2 @@
+dataset,dataset_url,model,n_estimators,max_depth,sample_rate_hz,window_samples,stride_samples,validation_accuracy,validation_macro_f1,test_accuracy,test_macro_f1,threshold,test_coverage,test_accepted_accuracy,test_accepted_windows,test_total_windows
+Japanese Black Beef Cow Behavior Classification Dataset v2,https://zenodo.org/records/5849025,RandomForestClassifier,150,18,25,50,25,0.6041397153945667,0.5180167888136166,0.6380897583429229,0.495987143712857,0.99,0.3924050632911392,0.9134897360703812,682,1738

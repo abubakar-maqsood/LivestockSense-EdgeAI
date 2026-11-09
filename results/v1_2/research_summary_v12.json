@@ -1,0 +1,82 @@
+{
+  "experiment": "CattleSense AI v1.2 cross-animal model comparison",
+  "dataset": "Japanese Black Beef Cow Behavior Classification Dataset v2",
+  "dataset_link": "https://zenodo.org/records/5849025",
+  "models": [
+    "Random Forest (17)",
+    "Extra Trees (27)"
+  ],
+  "six_held_out_cows": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "features_baseline": [
+    "acc_mean_x",
+    "acc_mean_y",
+    "acc_mean_z",
+    "acc_std_x",
+    "acc_std_y",
+    "acc_std_z",
+    "acc_min_x",
+    "acc_min_y",
+    "acc_min_z",
+    "acc_max_x",
+    "acc_max_y",
+    "acc_max_z",
+    "acc_energy_x",
+    "acc_energy_y",
+    "acc_energy_z",
+    "magnitude_mean",
+    "magnitude_std"
+  ],
+  "features_candidate": [
+    "acc_mean_x",
+    "acc_mean_y",
+    "acc_mean_z",
+    "acc_std_x",
+    "acc_std_y",
+    "acc_std_z",
+    "acc_min_x",
+    "acc_min_y",
+    "acc_min_z",
+    "acc_max_x",
+    "acc_max_y",
+    "acc_max_z",
+    "acc_energy_x",
+    "acc_energy_y",
+    "acc_energy_z",
+    "magnitude_mean",
+    "magnitude_std",
+    "median_x",
+    "median_y",
+    "median_z",
+    "mean_abs_diff_x",
+    "mean_abs_diff_y",
+    "mean_abs_diff_z",
+    "magnitude_median",
+    "magnitude_range",
+    "magnitude_mean_abs_diff",
+    "magnitude_energy"
+  ],
+  "means": [
+    {
+      "model": "Extra Trees (27)",
+      "mean_accuracy": 0.822768434423736,
+      "mean_macro_f1": 0.6802316571101832,
+      "mean_rus_recall_among_supported_cows": 0.6241273970943837
+    },
+    {
+      "model": "Random Forest (17)",
+      "mean_accuracy": 0.8270967491615848,
+      "mean_macro_f1": 0.678891869884254,
+      "mean_rus_recall_among_supported_cows": 0.5922897580765176
+    }
+  ],
+  "validation_selected_average_accuracy": 0.822768434423736,
+  "validation_selected_average_macro_f1": 0.6802316571101831,
+  "note": "Only six beef cows; overlapping windows; missing per-animal classes; thresholds are diagnostics, not calibration."
+}

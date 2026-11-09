@@ -1,0 +1,29 @@
+{
+  "study": "CattleSense AI v1.1 six held-out cow analysis",
+  "dataset": "Japanese Black Beef Cow Behavior Classification Dataset v2",
+  "dataset_url": "https://zenodo.org/records/5849025/files/JapaneseBlackBeefData.zip?download=1",
+  "classes": [
+    "RES",
+    "RUS",
+    "MOV",
+    "GRZ"
+  ],
+  "model": "RandomForestClassifier",
+  "model_n_estimators": 150,
+  "model_max_depth": 18,
+  "sensor_hz": 25,
+  "window_samples": 50,
+  "stride_samples": 25,
+  "test_cows": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "mean_accuracy_6_animals": 0.8270967491615847,
+  "mean_macro_f1_6_animals": 0.678891869884254,
+  "validation_threshold_selection": "85% validation accepted accuracy, >=30 accepted; otherwise reject all",
+  "note": "Averages are descriptive across six animals, not confidence intervals or a general-population estimate."
+}

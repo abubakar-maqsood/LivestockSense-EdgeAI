@@ -1,0 +1,105 @@
+{
+  "experiment": "CattleSense v1.3: training-only rebalancing and validation-selected rejection",
+  "dataset": "Japanese Black Beef Cow Behavior Classification Dataset v2",
+  "dataset_url": "https://zenodo.org/records/5849025",
+  "activity_labels": [
+    "RES",
+    "RUS",
+    "MOV",
+    "GRZ"
+  ],
+  "n_cows": 6,
+  "window_size": 50,
+  "stride": 25,
+  "sample_rate_hz": 25,
+  "features_base": [
+    "acc_mean_x",
+    "acc_mean_y",
+    "acc_mean_z",
+    "acc_std_x",
+    "acc_std_y",
+    "acc_std_z",
+    "acc_min_x",
+    "acc_min_y",
+    "acc_min_z",
+    "acc_max_x",
+    "acc_max_y",
+    "acc_max_z",
+    "acc_energy_x",
+    "acc_energy_y",
+    "acc_energy_z",
+    "magnitude_mean",
+    "magnitude_std"
+  ],
+  "features_extended": [
+    "acc_mean_x",
+    "acc_mean_y",
+    "acc_mean_z",
+    "acc_std_x",
+    "acc_std_y",
+    "acc_std_z",
+    "acc_min_x",
+    "acc_min_y",
+    "acc_min_z",
+    "acc_max_x",
+    "acc_max_y",
+    "acc_max_z",
+    "acc_energy_x",
+    "acc_energy_y",
+    "acc_energy_z",
+    "magnitude_mean",
+    "magnitude_std",
+    "median_x",
+    "median_y",
+    "median_z",
+    "mean_abs_diff_x",
+    "mean_abs_diff_y",
+    "mean_abs_diff_z",
+    "magnitude_median",
+    "magnitude_range",
+    "magnitude_mean_abs_diff",
+    "magnitude_energy"
+  ],
+  "candidates": [
+    "Random Forest (17)",
+    "Extra Trees (27)",
+    "RF + train oversampling (17)"
+  ],
+  "selection": "validation macro F1, one held-out validation cow per fold",
+  "rejection_policy": "validation-fitted temperature scaling and a validation-selected cutoff with at least 40% validation coverage",
+  "means": [
+    {
+      "model": "Extra Trees (27)",
+      "mean_accuracy": 0.822768434423736,
+      "mean_macro_f1": 0.6802316571101832,
+      "mean_rus_recall_supported": 0.6241273970943837,
+      "mean_coverage_selected": 0.38200828632732003,
+      "mean_acc_accepted": 0.9833930657823181
+    },
+    {
+      "model": "RF + train oversampling (17)",
+      "mean_accuracy": 0.8303939135051163,
+      "mean_macro_f1": 0.6822407966336254,
+      "mean_rus_recall_supported": 0.5927241988325679,
+      "mean_coverage_selected": 0.3909080957767566,
+      "mean_acc_accepted": 0.9747845208206534
+    },
+    {
+      "model": "Random Forest (17)",
+      "mean_accuracy": 0.827019971896335,
+      "mean_macro_f1": 0.6789798212616974,
+      "mean_rus_recall_supported": 0.5922897580765176,
+      "mean_coverage_selected": 0.3794043884389824,
+      "mean_acc_accepted": 0.9732374696641807
+    }
+  ],
+  "caveats": [
+    "Only six beef cattle; not validated on dairy cows",
+    "Overlapping windows reduce effective independence",
+    "Cross-animal results are exploratory; no separate external validation set",
+    "Selectivity on individual cows may be poorly calibrated",
+    "Test folds already used in earlier exploration; do not claim pristine independent test set",
+    "No on-device memory, latency or power measurements"
+  ],
+  "created_utc": "2026-11-07T22:56:59.245308+00:00"
+}

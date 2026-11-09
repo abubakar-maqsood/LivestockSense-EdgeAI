@@ -1,0 +1,6 @@
+Six Japanese Black beef cows, not a validated dairy-cow wearable.
+The dataset is not re-distributed here.
+Some behaviours are missing on individual animals. Macro F1 includes 4 target classes.
+Overlapping windows are correlated; cow is the evaluation unit.
+Model scores and selectivity thresholds may be poorly calibrated.
+No firmware, low-power measurements or new hardware sensor testing were performed.
